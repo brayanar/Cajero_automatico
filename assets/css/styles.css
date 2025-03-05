@@ -1,19 +1,34 @@
 
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #B6CBBD;
+}
+
+#titulo1 {
+    text-align: center;
+    margin-top: 2rem;
+    color: #2C3930;
+}
+
 #cards {
     display: flex;
     justify-content: space-between;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .card-img-top {
+    margin-top: 1rem ;
     width: 15rem;
     height: 18rem;
     align-self: center;
+    border-radius: 10px;
 }
 
 .card {
     background-color: #EBE5C2;
     width: 23rem;
+    border-color: #504B38;
+    border-radius: 10px;
 }
 
 .card-body button {
