@@ -1,0 +1,21 @@
+
+#cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.card-img-top {
+    width: 15rem;
+    height: 18rem;
+    align-self: center;
+}
+
+.card {
+    background-color: #EBE5C2;
+    width: 23rem;
+}
+
+.card-body button {
+    background-color: #F8F3D9;
+}
