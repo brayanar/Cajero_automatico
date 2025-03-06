@@ -14,6 +14,8 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
+    width: 98%;
+    justify-self: center;
 }
 
 .card-img-top {
