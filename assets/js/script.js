@@ -1,9 +1,13 @@
 const primeraPantalla = document.getElementById('inicio')
 
-const maria = document.getElementById('maria')
-const javier = document.getElementById('javier')
-const sofia = document.getElementById('sofia')
-const andres = document.getElementById('andres')
+const maria = document.querySelector("#maria")
+maria.addEventListener("click",seleccion)
+const javier = document.querySelector("#javier")
+javier.addEventListener("click",seleccion)
+const sofia = document.querySelector("#sofia")
+sofia.addEventListener("click",seleccion)
+const andres = document.querySelector("#andres")
+andres.addEventListener("click",seleccion)
 
 var personajes = [
     { nombre: "Maria", cuenta: "Corrinte", dinero: 684, clave: 7154 },
