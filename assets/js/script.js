@@ -8,6 +8,7 @@ var personajes = [
     { nombre: "Andrés", cuenta: "Débito", dinero: 749, clave: 1863 },
 ]
 
+// Seleccion de personaje
 
 function claveMaria() {
     let i = personajes[0].clave
@@ -19,25 +20,36 @@ function claveMaria() {
 function claveJavier() {
     let i = personajes[1].clave
     primeraPantalla.style.display = "none"
+    formulario.style.display = "unset"
     console.log(i)
 }
 function claveSofia() {
     let i = personajes[2].clave
     primeraPantalla.style.display = "none"
+    formulario.style.display = "unset"
     console.log(i)
 }
 function claveAndres() {
     let i = personajes[3].clave
     primeraPantalla.style.display = "none"
+    formulario.style.display = "unset"
     console.log(i)
+
+    formulario.addEventListener('submit', function () {
+        let pwd = document.getElementById('pwd').value
+        console.log(pwd)
+
+        if(pwd == 1863) {
+            alert("Clave correcta")
+        } else {
+            alert("no")
+        }
+    })
 }
 
-function clave() {
-    const claveIngresada = document.getElementById("pwd")
-    console.log(claveIngresada)
-}
+// Clave de ingreso
 
-formulario.addEventListener('submit', function() {
-    let pwd = document.getElementById('pwd').value
-    console.log(pwd)
-})
+// formulario.addEventListener('submit', function () {
+//     let pwd = document.getElementById('pwd').value
+//     console.log(pwd)
+// })
