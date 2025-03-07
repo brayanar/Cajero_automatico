@@ -15,6 +15,17 @@ function claveMaria() {
     primeraPantalla.style.display = "none"
     formulario.style.display = "unset"
     console.log(i)
+
+    formulario.addEventListener('submit', function () {
+        let pwd = document.getElementById('pwd').value
+        console.log(pwd)
+
+        if(pwd == i) {
+            alert("Clave correcta")
+        } else {
+            alert("no")
+        }
+    })
 }
 
 function claveJavier() {
@@ -22,12 +33,34 @@ function claveJavier() {
     primeraPantalla.style.display = "none"
     formulario.style.display = "unset"
     console.log(i)
+
+    formulario.addEventListener('submit', function () {
+        let pwd = document.getElementById('pwd').value
+        console.log(pwd)
+
+        if(pwd == i) {
+            alert("Clave correcta")
+        } else {
+            alert("no")
+        }
+    })
 }
 function claveSofia() {
     let i = personajes[2].clave
     primeraPantalla.style.display = "none"
     formulario.style.display = "unset"
     console.log(i)
+
+    formulario.addEventListener('submit', function () {
+        let pwd = document.getElementById('pwd').value
+        console.log(pwd)
+
+        if(pwd == i) {
+            alert("Clave correcta")
+        } else {
+            alert("no")
+        }
+    })
 }
 function claveAndres() {
     let i = personajes[3].clave
@@ -39,7 +72,7 @@ function claveAndres() {
         let pwd = document.getElementById('pwd').value
         console.log(pwd)
 
-        if(pwd == 1863) {
+        if(pwd == i) {
             alert("Clave correcta")
         } else {
             alert("no")
