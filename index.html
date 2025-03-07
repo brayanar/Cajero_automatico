@@ -31,7 +31,7 @@
                         plantas en su jardín.</p>
                 </div>
                 <div class="card-body">
-                    <button class="seleccionPersonaje" id="maria">Seleccionar</button>
+                    <button onclick="claveMaria()">Seleccionar</button>
                 </div>
             </div>
 
@@ -45,7 +45,7 @@
                         telescopio.</p>
                 </div>
                 <div class="card-body">
-                    <button class="seleccionPersonaje" id="javier">Seleccionar</button>
+                    <button onclick="claveJavier()">Seleccionar</button>
                 </div>
             </div>
 
@@ -61,7 +61,7 @@
                     </p>
                 </div>
                 <div class="card-body">
-                    <button class="seleccionPersonaje" id="sofia">Seleccionar</button>
+                    <button onclick="claveSofia()">Seleccionar</button>
                 </div>
             </div>
 
@@ -75,19 +75,18 @@
                         arqueológicos, ver cine clásico, escuchar música jazz y jugar al ajedrez en torneos locales.</p>
                 </div>
                 <div class="card-body">
-                    <button class="seleccionPersonaje" id="andres">Seleccionar</button>
+                    <button onclick="claveAndres()">Seleccionar</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Ingrese clave -->
-    <form id="pinForm">
-        <label for="inputPassword5" class="form-label">Password</label>
-        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-        <button type="submit">Enviar</button>
+    <form id="form">
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <input type="submit" value="Submit">
     </form>
-
 
     <!-- Selección de tipo de cuenta -->
 
