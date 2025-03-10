@@ -1,5 +1,7 @@
 const primeraPantalla = document.getElementById('inicio')
 const formulario = document.getElementById('form')
+var claveacceso 
+var pwd
 
 var personajes = [
     { nombre: "Maria", cuenta: "Corrinte", dinero: 684, clave: 7154 },
@@ -11,78 +13,55 @@ var personajes = [
 // Seleccion de personaje
 
 function claveMaria() {
-    let i = personajes[0].clave
+    let claveacceso = personajes[0].clave
     primeraPantalla.style.display = "none"
     formulario.style.display = "unset"
-    console.log(i)
+    console.log(claveacceso)
 
     formulario.addEventListener('submit', function () {
         let pwd = document.getElementById('pwd').value
         console.log(pwd)
-
-        if(pwd == i) {
-            alert("Clave correcta")
-        } else {
-            alert("no")
-        }
     })
 }
 
 function claveJavier() {
-    let i = personajes[1].clave
+    let claveacceso = personajes[1].clave
     primeraPantalla.style.display = "none"
     formulario.style.display = "unset"
-    console.log(i)
+    console.log(claveacceso)
 
     formulario.addEventListener('submit', function () {
         let pwd = document.getElementById('pwd').value
         console.log(pwd)
-
-        if(pwd == i) {
-            alert("Clave correcta")
-        } else {
-            alert("no")
-        }
     })
 }
 function claveSofia() {
-    let i = personajes[2].clave
+    let claveacceso = personajes[2].clave
     primeraPantalla.style.display = "none"
     formulario.style.display = "unset"
-    console.log(i)
+    console.log(claveacceso)
 
     formulario.addEventListener('submit', function () {
         let pwd = document.getElementById('pwd').value
         console.log(pwd)
-
-        if(pwd == i) {
-            alert("Clave correcta")
-        } else {
-            alert("no")
-        }
     })
 }
 function claveAndres() {
-    let i = personajes[3].clave
+    let claveacceso = personajes[3].clave
     primeraPantalla.style.display = "none"
     formulario.style.display = "unset"
-    console.log(i)
+    console.log(claveacceso)
 
     formulario.addEventListener('submit', function () {
         let pwd = document.getElementById('pwd').value
         console.log(pwd)
-
-        if(pwd == i) {
-            alert("Clave correcta")
-        } else {
-            alert("no")
-        }
     })
 }
 
 // Clave de ingreso
 
-// formulario.addEventListener('submit', function () {
-//     let pwd = document.getElementById('pwd').value
-//     console.log(pwd)
-// })
+if(pwd == claveacceso) {
+    alert("Clave correcta")
+} else {
+    alert("no")
+}
