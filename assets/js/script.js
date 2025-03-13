@@ -10,17 +10,19 @@ var personajes = [
 
 // Seleccion de personaje
 
-function claveMaria() {
-    let i = personajes[0].clave
+let personajeSeleccionado;
+
+function seleccionarPersonaje(indice) {
+    personajeSeleccionado = personajes[indice]
     primeraPantalla.style.display = "none"
     formulario.style.display = "unset"
-    console.log(i)
+    console.log(personajeSeleccionado.clave)
 
     formulario.addEventListener('submit', function () {
         let pwd = document.getElementById('pwd').value
         console.log(pwd)
 
-        if(pwd == i) {
+        if(pwd == personajeSeleccionado.clave) {
             alert("Clave correcta")
         } else {
             alert("no")
@@ -28,61 +30,3 @@ function claveMaria() {
     })
 }
 
-function claveJavier() {
-    let i = personajes[1].clave
-    primeraPantalla.style.display = "none"
-    formulario.style.display = "unset"
-    console.log(i)
-
-    formulario.addEventListener('submit', function () {
-        let pwd = document.getElementById('pwd').value
-        console.log(pwd)
-
-        if(pwd == i) {
-            alert("Clave correcta")
-        } else {
-            alert("no")
-        }
-    })
-}
-function claveSofia() {
-    let i = personajes[2].clave
-    primeraPantalla.style.display = "none"
-    formulario.style.display = "unset"
-    console.log(i)
-
-    formulario.addEventListener('submit', function () {
-        let pwd = document.getElementById('pwd').value
-        console.log(pwd)
-
-        if(pwd == i) {
-            alert("Clave correcta")
-        } else {
-            alert("no")
-        }
-    })
-}
-function claveAndres() {
-    let i = personajes[3].clave
-    primeraPantalla.style.display = "none"
-    formulario.style.display = "unset"
-    console.log(i)
-
-    formulario.addEventListener('submit', function () {
-        let pwd = document.getElementById('pwd').value
-        console.log(pwd)
-
-        if(pwd == i) {
-            alert("Clave correcta")
-        } else {
-            alert("no")
-        }
-    })
-}
-
-// Clave de ingreso
-
-// formulario.addEventListener('submit', function () {
-//     let pwd = document.getElementById('pwd').value
-//     console.log(pwd)
-// })
