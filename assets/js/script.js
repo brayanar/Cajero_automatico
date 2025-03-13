@@ -1,5 +1,5 @@
 const primeraPantalla = document.getElementById('inicio')
-const formulario = document.getElementById('form')
+const password = document.getElementById('form')
 
 var personajes = [
     { nombre: "Maria", cuenta: "Corrinte", dinero: 684, clave: 7154 },
@@ -15,18 +15,17 @@ let personajeSeleccionado;
 function seleccionarPersonaje(indice) {
     personajeSeleccionado = personajes[indice]
     primeraPantalla.style.display = "none"
-    formulario.style.display = "unset"
+    password.style.display = "unset"
     console.log(personajeSeleccionado.clave)
-
-    formulario.addEventListener('submit', function () {
-        let pwd = document.getElementById('pwd').value
-        console.log(pwd)
-
-        if(pwd == personajeSeleccionado.clave) {
-            alert("Clave correcta")
-        } else {
-            alert("no")
-        }
-    })
 }
 
+password.addEventListener('submit', function () {
+    let pwd = document.getElementById('pwd').value
+    console.log(pwd)
+
+    if(pwd == personajeSeleccionado.clave) {
+        alert("Clave correcta")
+    } else {
+        alert("no")
+    }
+})
