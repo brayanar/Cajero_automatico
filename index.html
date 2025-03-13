@@ -82,7 +82,7 @@
     </div>
 
     <!-- Ingrese clave -->
-    <div id="form1">
+    <div id="form1" style="display: none;">
         <form>
             <label for="pwd">Password:</label><br>
             <input type="password" id="pwd" name="pwd"><br><br>
@@ -95,12 +95,13 @@
     <div id="ctas" class="form-select" aria-label="Default select example" style="display: none;">
         <h1>Cuentas</h1>
         <div id="cuentas">
-            <button onclick="cuentaUsuario()" value="0">Cuenta corriente</button>
-            <button onclick="cuentaUsuario()" value="1">Vista</button>
-            <button onclick="cuentaUsuario()" value="2">Cuenta de ahorro</button>
-            <button onclick="cuentaUsuario()" value="3">Débito</button>
+            <button onclick="cuentaUsuario('corriente')">Cuenta corriente</button>
+            <button onclick="cuentaUsuario('vista')">Vista</button>
+            <button onclick="cuentaUsuario('ahorro')">Cuenta de ahorro</button>
+            <button onclick="cuentaUsuario('debito')">Débito</button>
         </div>
         <button onclick="consultaSaldo()">Consultar saldo</button>
+        <p id="saldo"></p>
     </div>
 
     <!-- Pantalla con montos -->

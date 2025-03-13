@@ -3,10 +3,10 @@ const password = document.getElementById('form1')
 const pantallaCuentas = document.getElementById('ctas')
 
 var personajes = [
-    { nombre: "Maria", cuenta: "Corriente", dinero: 684, clave: 7154 },
-    { nombre: "Javier", cuenta: "Vista", dinero: 978, clave: 8520 },
-    { nombre: "Sofía", cuenta: "Ahorro", dinero: 598, clave: 3817 },
-    { nombre: "Andrés", cuenta: "Débito", dinero: 749, clave: 1863 },
+    { nombre: "Maria", cuenta: "corriente", dinero: 684, clave: 7154 },
+    { nombre: "Javier", cuenta: "vista", dinero: 978, clave: 8520 },
+    { nombre: "Sofía", cuenta: "ahorro", dinero: 598, clave: 3817 },
+    { nombre: "Andrés", cuenta: "debito", dinero: 749, clave: 1863 },
 ]
 
 // Seleccion de personaje
@@ -34,8 +34,11 @@ password.addEventListener('submit', function () {
     }
 })
 
-function cuentaUsuario() {
-    if (cuentaIngresada === personajeSeleccionado.cuenta) {
+let cuentaUsuarioSeleccinada;
+
+function cuentaUsuario(tipoCuenta) {
+    cuentaUsuarioSeleccinada = tipoCuenta
+    if (cuentaUsuarioSeleccinada === personajeSeleccionado.cuenta) {
         alert("Correcto")
     } else {
         alert("No")
@@ -43,6 +46,8 @@ function cuentaUsuario() {
 }
 
 function consultaSaldo() {
-    document.writeln(personajeSeleccionado.nombre, " tiene ", personajeSeleccionado.dinero, " dolares de saldo")
-}
+    let saldo = document.getElementById("saldo")
+    saldo.textContent = personajeSeleccionado.nombre + " tiene " + personajeSeleccionado.dinero + " dolares de saldo"
 
+    // document.writeln(personajeSeleccionado.nombre, " tiene ", personajeSeleccionado.dinero, " dolares de saldo")
+}
