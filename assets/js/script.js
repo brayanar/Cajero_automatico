@@ -1,5 +1,5 @@
 const primeraPantalla = document.getElementById('inicio')
-const password = document.getElementById('form')
+const password = document.getElementById('form1')
 const pantallaCuentas = document.getElementById('ctas')
 
 var personajes = [
@@ -16,7 +16,7 @@ let personajeSeleccionado;
 function seleccionarPersonaje(indice) {
     personajeSeleccionado = personajes[indice]
     primeraPantalla.style.display = "none"
-    password.style.display = "unset"
+    password.style.display = "block"
     console.log(personajeSeleccionado.clave)
 }
 

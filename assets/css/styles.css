@@ -39,8 +39,6 @@ body {
 
 #form1 {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vw;
     display: none;
+    place-items: center;
 }
