@@ -82,21 +82,26 @@
     </div>
 
     <!-- Ingrese clave -->
-    <form id="form">
-        <label for="pwd">Password:</label><br>
-        <input type="password" id="pwd" name="pwd"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div id="form1">
+        <form id="form">
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 
-    <!-- Selección de tipo de cuenta -->
+    <!-- Selección de tipo de cuenta y consulta de saldo -->
 
-    <select id = "ctas" class="form-select" aria-label="Default select example">
-        <option selected>Seleccione su tipo de cuenta</option>
-        <option value="1">Cuenta corriente</option>
-        <option value="2">Vista</option>
-        <option value="3">Cuenta de ahorro</option>
-        <option value="4">Débito</option>
-    </select>
+    <div id="ctas" class="form-select" aria-label="Default select example" style="display: none;">
+        <h1>Cuentas</h1>
+        <div id="cuentas">
+            <button onclick="cuentaUsuario()" value="0">Cuenta corriente</button>
+            <button onclick="cuentaUsuario()" value="1">Vista</button>
+            <button onclick="cuentaUsuario()" value="2">Cuenta de ahorro</button>
+            <button onclick="cuentaUsuario()" value="3">Débito</button>
+        </div>
+        <button onclick="consultaSaldo()">Consultar saldo</button>
+    </div>
 
     <!-- Pantalla con montos -->
 
