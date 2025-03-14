@@ -22,7 +22,7 @@ let personajeSeleccionado;
 function seleccionarPersonaje(indice) {
     personajeSeleccionado = personajes[indice]
     primeraPantalla.style.display = "none"
-    password.style.display = "block"
+    password.style.display = ""
     saldoPersonaje = personajes[indice].dinero
     console.log(personajeSeleccionado.clave)
     console.log(saldoPersonaje)

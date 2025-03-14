@@ -37,10 +37,33 @@ body {
     background-color: #F8F3D9;
 }
 
+#form {
+    height: 50vh;
+    align-self: center;
+    width: 50vw;
+    align-content: center;
+    text-align: center;
+}
+
 #form1 {
     display: flex;
-    display: none;
-    place-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+#form2 {
+    text-align: center;
+    align-self: center;
+}
+
+#form1 label {
+    font-size: 3rem;
+    color: #2C3930;
+}
+
+#form2 input {
+    border-radius: 3px;
+    background-color: #EBE5C2;
 }
 
 #ctas p{
