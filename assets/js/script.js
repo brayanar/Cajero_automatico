@@ -1,6 +1,6 @@
 const primeraPantalla = document.getElementById('inicio')
 const password = document.getElementById('form1')
-const pantallaCuentas = document.getElementById('ctas')
+const pantallaCuentas = document.getElementById('pantallaCuentas')
 const pantallaMontos = document.getElementById('montosSugeridos')
 const pantallaOtroMonto = document.getElementById('pantallaRetiro')
 const pantallaInputRetiro = document.getElementById('inputRetiro')
@@ -35,7 +35,7 @@ password.addEventListener('submit', function () {
     if (pwd == personajeSeleccionado.clave) {
         alert("Clave correcta")
         password.style.display = "none"
-        pantallaCuentas.style.display = "block"
+        pantallaCuentas.style.display = ""
         event.preventDefault()
     } else {
         alert("intente nuevamente")

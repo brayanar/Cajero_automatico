@@ -1,6 +1,5 @@
-
 body {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #B6CBBD;
 }
 
@@ -19,7 +18,7 @@ body {
 }
 
 .card-img-top {
-    margin-top: 1rem ;
+    margin-top: 1rem;
     width: 15rem;
     height: 18rem;
     align-self: center;
@@ -62,10 +61,31 @@ body {
 }
 
 #form2 input {
-    border-radius: 3px;
-    background-color: #EBE5C2;
+    border-radius: 5px;
+    background-color: #F8F3D9;
 }
 
-#ctas p{
-    display: "none";
+#cuentas p {
+    color: #2C3930;
+    font-size: 3rem;
+    align-self: center;
+}
+
+#cuentas {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+#btns {
+    align-self: center;
+}
+
+#btns button {
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 2rem;
+    background-color: #F8F3D9;
 }

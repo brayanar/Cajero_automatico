@@ -91,24 +91,23 @@
     </div>
 
     <!-- Selección de tipo de cuenta y consulta de saldo -->
-    <div>
-        <div id="ctas" class="form-select" aria-label="Default select example" style="display: none;">
-            <h1>Cuentas</h1>
-            <div id="cuentas">
-                <button onclick="cuentaUsuario('corriente')">Cuenta corriente</button>
-                <button onclick="cuentaUsuario('vista')">Vista</button>
-                <button onclick="cuentaUsuario('ahorro')">Cuenta de ahorro</button>
-                <button onclick="cuentaUsuario('debito')">Débito</button>
-            </div>
-            <button onclick="consultaSaldo()">Consultar saldo</button>
+    <div id="pantallaCuentas" style="display: none;">
+        <div id="cuentas">
+            <p>Por favor, seleccione producto con el que desea operar.</p>
+            <div id="btns">
+            <button onclick="cuentaUsuario('corriente')">Cuenta corriente</button>
+            <button onclick="cuentaUsuario('vista')">Vista</button>
+            <button onclick="cuentaUsuario('ahorro')">Cuenta de ahorro</button>
+            <button onclick="cuentaUsuario('debito')">Débito</button>
+            <button id="consultarSaldo" onclick="consultaSaldo()">Consultar saldo</button>
         </div>
-        <p id="saldo"></p>
+        </div>
     </div>
 
     <!-- Pantalla con montos sugeridos-->
 
     <div>
-        <div id="montosSugeridos" class="form-select" aria-label="Default select example" style="display: none;">
+        <div id="montosSugeridos" style="display: none;">
             <h1>Por favor, seleccione el monto que desea operar</h1>
             <div id="montos">
                 <button onclick="montoUsuario(5)">5</button>
