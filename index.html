@@ -118,12 +118,24 @@
                 <button onclick="montoUsuario(30)">30</button>
                 <button onclick="montoUsuario(50)">50</button>
             </div>
+            <div>
+                <p id="confirmar"></p>
+            </div>
             <button onclick="otroMonto()">Otro monto</button>
         </div>
-        <p id="saldo"></p>
     </div>
 
     <!-- Pantalla de un monto diferente -->
+
+    <div id="pantallaMontoD" style="display: none;">
+        <input type="text" id="valorInput" placeholder="Ingrese un valor">
+        <button onclick="enviarValor()">Enviar</button>
+        <div id="confirmar1" style="display: none;">
+            <p id="valorEnviado"></p>
+            <button onclick="retirarMonto()">Confirmar</button>
+        </div>
+    </div>
+
 
     <!-- ¿Esta seguro del monto? -->
 
