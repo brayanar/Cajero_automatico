@@ -135,13 +135,11 @@
     <!-- Pantalla de un monto diferente -->
 
     <div id="pantallaRetiro" style="display: none;">
-        <div id="inputRetiro" style="display: none;">
-            <p class="titulos">Por favor, escriba el monto que desea.</p>
-            <input type="text" id="valorInput" placeholder="Ingrese un valor">
-            <div class="btns">
-                <button onclick="enviarValor()">Enviar</button>
-            </div>
-        </div>
+        <form id="inputRetiro" style="display: none;">
+            <label for="valorInput" class="titulos">Por favor, escriba el monto que desea.</label><br>
+            <input type="password" id="valorInput" name="valorInput"><br>
+            <button onclick="enviarValor()" type="submit" value="Confirmar" id="inputEnviar">Confirmar</button>
+        </form>
 
         <!-- ¿Esta seguro del monto? -->
 

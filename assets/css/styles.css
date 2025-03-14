@@ -110,3 +110,31 @@ body {
 #btnsMontos {
     justify-self: center;
 }
+
+#inputRetiro {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+#valorInput {
+    width: 165px;
+    border-radius: 5px;
+    background-color: #F8F3D9;
+    align-self: center;
+}
+
+#inputEnviar{
+    border-radius: 5px;
+    background-color: #F8F3D9;
+    width: fit-content;
+    align-self: center;
+}
+
+#inputsDeRetiro {
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #F8F3D9;
+}

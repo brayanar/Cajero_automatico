@@ -79,8 +79,8 @@ function otroMonto() {
 }
 
 function enviarValor() {
-    pantallaInputRetiro.style.display = "block"
-    pantallaOtroMonto.style.display = "block"
+    pantallaInputRetiro.style.display = ""
+    pantallaOtroMonto.style.display = ""
     valor = document.getElementById("valorInput").value;
 
     if (valor.trim() !== "") {
