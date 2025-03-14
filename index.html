@@ -93,38 +93,42 @@
     <!-- Selección de tipo de cuenta y consulta de saldo -->
     <div id="pantallaCuentas" style="display: none;">
         <div id="cuentas">
-            <p>Por favor, seleccione producto con el que desea operar.</p>
-            <div id="btns">
-            <button onclick="cuentaUsuario('corriente')">Cuenta corriente</button>
-            <button onclick="cuentaUsuario('vista')">Vista</button>
-            <button onclick="cuentaUsuario('ahorro')">Cuenta de ahorro</button>
-            <button onclick="cuentaUsuario('debito')">Débito</button>
-            <button id="consultarSaldo" onclick="consultaSaldo()">Consultar saldo</button>
-        </div>
+            <p class="titulos">Por favor, seleccione producto con el que desea operar.</p>
+            <div class="btns">
+                <button onclick="cuentaUsuario('corriente')">Cuenta corriente</button>
+                <button onclick="cuentaUsuario('vista')">Vista</button>
+                <button onclick="cuentaUsuario('ahorro')">Cuenta de ahorro</button>
+                <button onclick="cuentaUsuario('debito')">Débito</button>
+                <button id="consultarSaldo" onclick="consultaSaldo()">Consultar saldo</button>
+            </div>
         </div>
     </div>
 
     <!-- Pantalla con montos sugeridos-->
 
-    <div>
-        <div id="montosSugeridos" style="display: none;">
-            <h1>Por favor, seleccione el monto que desea operar</h1>
-            <div id="montos">
-                <button onclick="montoUsuario(5)">5</button>
-                <button onclick="montoUsuario(10)">10</button>
-                <button onclick="montoUsuario(15)">15</button>
-                <button onclick="montoUsuario(20)">20</button>
-                <button onclick="montoUsuario(30)">30</button>
-                <button onclick="montoUsuario(50)">50</button>
-            </div>
-            <div>
-                <p id="confirmar"></p>
-                <div id="confirmar2" style="display: none;">
-                    <p id="valorSeleccionado"></p>
-                    <button onclick="retirarMonto()">Confirmar</button>
+    <div id="montosSugeridos" style="display: none;">
+        <div id="montos">
+            <p class="titulos">Por favor, seleccione el monto que desea operar.</p>
+            <div class="btns">
+                <button class="btnsNumericos" onclick="montoUsuario(5)">5</button>
+                <button class="btnsNumericos" onclick="montoUsuario(10)">10</button>
+                <button class="btnsNumericos" onclick="montoUsuario(15)">15</button>
+                <br></br>
+                <button class="btnsNumericos" onclick="montoUsuario(20)">20</button>
+                <button class="btnsNumericos" onclick="montoUsuario(30)">30</button>
+                <button class="btnsNumericos" onclick="montoUsuario(50)">50</button>
+                <br></br>
+                <div id="btnsMontos">
+                    <button onclick="otroMonto()">Otro monto</button>
                 </div>
             </div>
-            <button onclick="otroMonto()">Otro monto</button>
+        </div>
+        <div>
+            <p id="confirmar"></p>
+            <div id="confirmar2" style="display: none;">
+                <p id="valorSeleccionado"></p>
+                <button onclick="retirarMonto()">Confirmar</button>
+            </div>
         </div>
     </div>
 
@@ -132,8 +136,11 @@
 
     <div id="pantallaRetiro" style="display: none;">
         <div id="inputRetiro" style="display: none;">
+            <p class="titulos">Por favor, escriba el monto que desea.</p>
             <input type="text" id="valorInput" placeholder="Ingrese un valor">
+            <div class="btns">
             <button onclick="enviarValor()">Enviar</button>
+        </div>
         </div>
 
         <!-- ¿Esta seguro del monto? -->

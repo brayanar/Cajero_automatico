@@ -65,7 +65,7 @@ body {
     background-color: #F8F3D9;
 }
 
-#cuentas p {
+.titulos {
     color: #2C3930;
     font-size: 3rem;
     align-self: center;
@@ -78,14 +78,35 @@ body {
     justify-content: center;
 }
 
-#btns {
+.btns {
     align-self: center;
 }
 
-#btns button {
+.btns button {
     border-radius: 5px;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 2rem;
     background-color: #F8F3D9;
+}
+
+#montosSugeridos p {
+    color: #2C3930;
+    font-size: 3rem;
+    align-self: center;
+}
+
+#montos {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.btnsNumericos {
+    width: 165px;
+}
+
+#btnsMontos {
+    justify-self: center;
 }
