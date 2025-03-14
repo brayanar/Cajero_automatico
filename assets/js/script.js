@@ -3,7 +3,7 @@ const password = document.getElementById('form1')
 const pantallaCuentas = document.getElementById('ctas')
 
 var personajes = [
-    { nombre: "Maria", cuenta: "corriente", dinero: 684, clave: 7154 },
+    { nombre: "Emma", cuenta: "corriente", dinero: 684, clave: 7154 },
     { nombre: "Javier", cuenta: "vista", dinero: 978, clave: 8520 },
     { nombre: "Sofía", cuenta: "ahorro", dinero: 598, clave: 3817 },
     { nombre: "Andrés", cuenta: "debito", dinero: 749, clave: 1863 },
@@ -46,8 +46,8 @@ function cuentaUsuario(tipoCuenta) {
 }
 
 function consultaSaldo() {
+    pantallaCuentas.style.display="none"
     let saldo = document.getElementById("saldo")
     saldo.textContent = personajeSeleccionado.nombre + " tiene " + personajeSeleccionado.dinero + " dolares de saldo"
-
-    // document.writeln(personajeSeleccionado.nombre, " tiene ", personajeSeleccionado.dinero, " dolares de saldo")
+    saldo.style.display="block"
 }

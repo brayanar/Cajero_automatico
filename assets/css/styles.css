@@ -42,3 +42,7 @@ body {
     display: none;
     place-items: center;
 }
+
+#ctas p{
+    display: "none";
+}

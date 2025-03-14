@@ -52,7 +52,7 @@
             <div class="card">
                 <img src="./assets/img/pin5.jpg" class="card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title">Sofía</h5>
+                    <h5 class="card-title">Emma</h5>
                     <p class="card-text">Chef de 25 años, es una apasionada de la gastronomía, creativa y espontánea,
                         que
                         sueña con abrir su propio restaurante; le encanta viajar para descubrir nuevas culturas
@@ -91,16 +91,17 @@
     </div>
 
     <!-- Selección de tipo de cuenta y consulta de saldo -->
-
-    <div id="ctas" class="form-select" aria-label="Default select example" style="display: none;">
-        <h1>Cuentas</h1>
-        <div id="cuentas">
-            <button onclick="cuentaUsuario('corriente')">Cuenta corriente</button>
-            <button onclick="cuentaUsuario('vista')">Vista</button>
-            <button onclick="cuentaUsuario('ahorro')">Cuenta de ahorro</button>
-            <button onclick="cuentaUsuario('debito')">Débito</button>
+    <div>
+        <div id="ctas" class="form-select" aria-label="Default select example" style="display: none;">
+            <h1>Cuentas</h1>
+            <div id="cuentas">
+                <button onclick="cuentaUsuario('corriente')">Cuenta corriente</button>
+                <button onclick="cuentaUsuario('vista')">Vista</button>
+                <button onclick="cuentaUsuario('ahorro')">Cuenta de ahorro</button>
+                <button onclick="cuentaUsuario('debito')">Débito</button>
+            </div>
+            <button onclick="consultaSaldo()">Consultar saldo</button>
         </div>
-        <button onclick="consultaSaldo()">Consultar saldo</button>
         <p id="saldo"></p>
     </div>
 
