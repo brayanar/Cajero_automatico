@@ -105,7 +105,23 @@
         <p id="saldo"></p>
     </div>
 
-    <!-- Pantalla con montos -->
+    <!-- Pantalla con montos sugeridos-->
+
+    <div>
+        <div id="montosSugeridos" class="form-select" aria-label="Default select example" style="display: none;">
+            <h1>Por favor, seleccione el monto que desea operar</h1>
+            <div id="montos">
+                <button onclick="montoUsuario(5)">5</button>
+                <button onclick="montoUsuario(10)">10</button>
+                <button onclick="montoUsuario(15)">15</button>
+                <button onclick="montoUsuario(20)">20</button>
+                <button onclick="montoUsuario(30)">30</button>
+                <button onclick="montoUsuario(50)">50</button>
+            </div>
+            <button onclick="otroMonto()">Otro monto</button>
+        </div>
+        <p id="saldo"></p>
+    </div>
 
     <!-- Pantalla de un monto diferente -->
 

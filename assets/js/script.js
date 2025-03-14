@@ -1,6 +1,7 @@
 const primeraPantalla = document.getElementById('inicio')
 const password = document.getElementById('form1')
 const pantallaCuentas = document.getElementById('ctas')
+const pantallaMontos = document.getElementById('montosSugeridos')
 
 var personajes = [
     { nombre: "Emma", cuenta: "corriente", dinero: 684, clave: 7154 },
@@ -40,6 +41,9 @@ function cuentaUsuario(tipoCuenta) {
     cuentaUsuarioSeleccinada = tipoCuenta
     if (cuentaUsuarioSeleccinada === personajeSeleccionado.cuenta) {
         alert("Correcto")
+        montoUsuario()
+        pantallaMontos.style.display="block"
+        pantallaCuentas.style.display = "none"
     } else {
         alert("No")
     }
@@ -50,4 +54,11 @@ function consultaSaldo() {
     let saldo = document.getElementById("saldo")
     saldo.textContent = personajeSeleccionado.nombre + " tiene " + personajeSeleccionado.dinero + " dolares de saldo"
     saldo.style.display="block"
+}
+
+let montoUsuarioSeleccionado ;
+
+function montoUsuario (indice) {
+    montoUsuarioSeleccionado = indice
+    console.log(indice)
 }
