@@ -127,9 +127,11 @@
 
     <!-- Pantalla de un monto diferente -->
 
-    <div id="pantallaMontoD" style="display: none;">
-        <input type="text" id="valorInput" placeholder="Ingrese un valor">
-        <button onclick="enviarValor()">Enviar</button>
+    <div id="pantallaRetiro" style="display: none;">
+        <div id="inputRetiro" style="display: none;">
+            <input type="text" id="valorInput" placeholder="Ingrese un valor">
+            <button onclick="enviarValor()">Enviar</button>
+        </div>
         <div id="confirmar1" style="display: none;">
             <p id="valorEnviado"></p>
             <button onclick="retirarMonto()">Confirmar</button>

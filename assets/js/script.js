@@ -2,7 +2,8 @@ const primeraPantalla = document.getElementById('inicio')
 const password = document.getElementById('form1')
 const pantallaCuentas = document.getElementById('ctas')
 const pantallaMontos = document.getElementById('montosSugeridos')
-const pantallaOtroMonto = document.getElementById('pantallaMontoD')
+const pantallaOtroMonto = document.getElementById('pantallaRetiro')
+const pantallaInputRetiro = document.getElementById('inputRetiro')
 const pantallaConfirmarMonto = document.getElementById('confirmar1')
 var saldoPersonaje
 var valor
@@ -75,10 +76,12 @@ function otroMonto (){
 }
 
 function enviarValor() {
+        pantallaInputRetiro.style.display="block"
     pantallaOtroMonto.style.display="block"
     valor = document.getElementById("valorInput").value;
 
     if (valor.trim() !== "") {
+        pantallaInputRetiro.style.display="none"
         document.getElementById("valorEnviado").textContent = "Confirmar el retiro de: " + valor + " dolares";
         document.getElementById("valorEnviado").style.display = "block";
         document.getElementById("valorInput").value = "";
