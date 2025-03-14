@@ -25,6 +25,7 @@ function seleccionarPersonaje(indice) {
     password.style.display = "block"
     saldoPersonaje = personajes[indice].dinero
     console.log(personajeSeleccionado.clave)
+    console.log(saldoPersonaje)
 }
 
 password.addEventListener('submit', function () {
@@ -63,36 +64,38 @@ function consultaSaldo() {
 }
 
 let montoUsuarioSeleccionado;
+let saldoPersonajeBtns;
 
 function montoUsuario(indice) {
-    montoUsuarioSeleccionado = indice
+    montoUsuarioSeleccionado = Number(indice)
     console.log(indice)
-    console.log(saldoPersonaje)
+    saldoPersonajeBtns = saldoPersonaje - montoUsuarioSeleccionado
+    console.log(saldoPersonajeBtns)
 }
 
-function otroMonto (){
-    pantallaMontos.style.display="none"
+function otroMonto() {
+    pantallaMontos.style.display = "none"
     enviarValor()
 }
 
 function enviarValor() {
-        pantallaInputRetiro.style.display="block"
-    pantallaOtroMonto.style.display="block"
+    pantallaInputRetiro.style.display = "block"
+    pantallaOtroMonto.style.display = "block"
     valor = document.getElementById("valorInput").value;
 
     if (valor.trim() !== "") {
-        pantallaInputRetiro.style.display="none"
+        pantallaInputRetiro.style.display = "none"
         document.getElementById("valorEnviado").textContent = "Confirmar el retiro de: " + valor + " dolares";
         document.getElementById("valorEnviado").style.display = "block";
         document.getElementById("valorInput").value = "";
         console.log(valor)
-        pantallaConfirmarMonto.style.display="block"
+        pantallaConfirmarMonto.style.display = "block"
     } else {
         alert("Por favor, ingrese un valor.");
     }
 }
 
 function retirarMonto() {
-    saldoPersonaje = saldoPersonaje-valor
+    saldoPersonaje = saldoPersonaje - valor
     console.log(saldoPersonaje)
 }

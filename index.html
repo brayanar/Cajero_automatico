@@ -120,6 +120,10 @@
             </div>
             <div>
                 <p id="confirmar"></p>
+                <div id="confirmar2" style="display: none;">
+                    <p id="valorSeleccionado"></p>
+                    <button onclick="retirarMonto()">Confirmar</button>
+                </div>
             </div>
             <button onclick="otroMonto()">Otro monto</button>
         </div>
@@ -132,16 +136,14 @@
             <input type="text" id="valorInput" placeholder="Ingrese un valor">
             <button onclick="enviarValor()">Enviar</button>
         </div>
+
+        <!-- ¿Esta seguro del monto? -->
+
         <div id="confirmar1" style="display: none;">
             <p id="valorEnviado"></p>
             <button onclick="retirarMonto()">Confirmar</button>
         </div>
     </div>
-
-
-    <!-- ¿Esta seguro del monto? -->
-
-    <!-- Pantalla de espera, contando dinero -->
 
     <!-- ¿Desea hacer otra operación? -->
 
