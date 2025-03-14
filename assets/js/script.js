@@ -89,7 +89,7 @@ function enviarValor() {
         document.getElementById("valorEnviado").style.display = "block";
         document.getElementById("valorInput").value = "";
         console.log(valor)
-        pantallaConfirmarMonto.style.display = "block"
+        pantallaConfirmarMonto.style.display = ""
     } else {
         alert("Por favor, ingrese un valor.");
     }
