@@ -138,3 +138,14 @@ body {
     margin-right: 20px;
     background-color: #F8F3D9;
 }
+
+#pantallaFinal {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+#transaccion {
+    align-content: center;
+}

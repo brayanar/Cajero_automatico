@@ -5,13 +5,14 @@ const pantallaMontos = document.getElementById('montosSugeridos')
 const pantallaOtroMonto = document.getElementById('pantallaRetiro')
 const pantallaInputRetiro = document.getElementById('inputRetiro')
 const pantallaConfirmarMonto = document.getElementById('confirmar1')
+const pantallaFinal = document.getElementById('pantallaFinal')
 var saldoPersonaje
 var valor
 
 var personajes = [
-    { nombre: "Emma", cuenta: "corriente", dinero: 684, clave: 7154 },
+    { nombre: "Maria", cuenta: "corriente", dinero: 684, clave: 7154 },
     { nombre: "Javier", cuenta: "vista", dinero: 978, clave: 8520 },
-    { nombre: "Sofía", cuenta: "ahorro", dinero: 598, clave: 3817 },
+    { nombre: "Emma", cuenta: "ahorro", dinero: 598, clave: 3817 },
     { nombre: "Andrés", cuenta: "debito", dinero: 749, clave: 1863 },
 ]
 
@@ -71,6 +72,8 @@ function montoUsuario(indice) {
     console.log(indice)
     saldoPersonajeBtns = saldoPersonaje - montoUsuarioSeleccionado
     console.log(saldoPersonajeBtns)
+    pantallaMontos.style.display="none"
+    pantallaFinalF2()
 }
 
 function otroMonto() {
@@ -90,6 +93,7 @@ function enviarValor() {
         document.getElementById("valorInput").value = "";
         console.log(valor)
         pantallaConfirmarMonto.style.display = ""
+        event.preventDefault()
     } else {
         alert("Por favor, ingrese un valor.");
     }
@@ -98,4 +102,18 @@ function enviarValor() {
 function retirarMonto() {
     saldoPersonaje = saldoPersonaje - valor
     console.log(saldoPersonaje)
+    pantallaFinalF()
+    pantallaConfirmarMonto.style.display="none"
 }
+
+function pantallaFinalF() {
+    pantallaConfirmarMonto.style.display="none"
+    pantallaFinal.style.display= ""
+    document.getElementById('transaccion').textContent = "Haz retirado exitosamente " + valor
+    }
+
+function pantallaFinalF2() {
+    pantallaConfirmarMonto.style.display="none"
+    pantallaFinal.style.display= ""
+    document.getElementById('transaccion').textContent = "Haz retirado exitosamente " + montoUsuarioSeleccionado
+    }
