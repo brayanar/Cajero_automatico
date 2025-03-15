@@ -72,7 +72,7 @@ function montoUsuario(indice) {
     console.log(indice)
     saldoPersonajeBtns = saldoPersonaje - montoUsuarioSeleccionado
     console.log(saldoPersonajeBtns)
-    pantallaMontos.style.display="none"
+    pantallaMontos.style.display = "none"
     pantallaFinalF2()
 }
 
@@ -84,6 +84,7 @@ function otroMonto() {
 function enviarValor() {
     pantallaInputRetiro.style.display = ""
     pantallaOtroMonto.style.display = ""
+    pantallaFinal.style.display = "none"
     valor = document.getElementById("valorInput").value;
 
     if (valor.trim() !== "") {
@@ -103,17 +104,17 @@ function retirarMonto() {
     saldoPersonaje = saldoPersonaje - valor
     console.log(saldoPersonaje)
     pantallaFinalF()
-    pantallaConfirmarMonto.style.display="none"
+    pantallaConfirmarMonto.style.display = "none"
 }
 
 function pantallaFinalF() {
-    pantallaConfirmarMonto.style.display="none"
-    pantallaFinal.style.display= ""
+    pantallaConfirmarMonto.style.display = "none"
+    pantallaFinal.style.display = ""
     document.getElementById('transaccion').textContent = "Haz retirado exitosamente " + valor
-    }
+}
 
 function pantallaFinalF2() {
-    pantallaConfirmarMonto.style.display="none"
-    pantallaFinal.style.display= ""
+    pantallaConfirmarMonto.style.display = "none"
+    pantallaFinal.style.display = ""
     document.getElementById('transaccion').textContent = "Haz retirado exitosamente " + montoUsuarioSeleccionado
-    }
+}
