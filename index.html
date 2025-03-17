@@ -29,8 +29,7 @@
                             propias
                             plantas en su jardín.</p>
                     </div>
-                    <a href="#pContraseña" class="btn boton-estilizado" tabindex="-1" role="button" 
-                        onclick="seleccionarPersonaje(0)">Seleccionar</a>
+                    <button class="boton-estilizado" onclick="seleccionarPersonaje(0)">Seleccionar</button>
                 </div>
                 <div class="card">
                     <img src="./assets/img/pin21.jpg" class="card-img-top">
@@ -43,8 +42,7 @@
                             videojuegos, ver películas de ciencia ficción, leer cómics y observar las estrellas con su
                             telescopio.</p>
                     </div>
-                    <a href="#pContraseña" class="btn boton-estilizado" tabindex="-1" role="button" 
-                        onclick="seleccionarPersonaje(1)">Seleccionar</a>
+                    <button class="boton-estilizado" onclick="seleccionarPersonaje(1)">Seleccionar</button>
                 </div>
                 <div class="card">
                     <img src="./assets/img/pin5.jpg" class="card-img-top">
@@ -59,8 +57,7 @@
                             arte.
                         </p>
                     </div>
-                    <a href="#pContraseña" class="btn boton-estilizado" tabindex="-1" role="button" 
-                        onclick="seleccionarPersonaje(2)">Seleccionar</a>
+                    <button class="btn boton-estilizado" onclick="seleccionarPersonaje(2)">Seleccionar</button>
                 </div>
                 <div class="card">
                     <img src="./assets/img/pin8.jpg" class="card-img-top">
@@ -72,8 +69,7 @@
                             arqueológicos, ver cine clásico, escuchar música jazz y jugar al ajedrez en torneos locales.
                         </p>
                     </div>
-                    <a href="#pContraseña" class="btn boton-estilizado" tabindex="-1" role="button" 
-                        onclick="seleccionarPersonaje(3)">Seleccionar</a>
+                    <button class="btn boton-estilizado" onclick="seleccionarPersonaje(3)">Seleccionar</button>
                 </div>
             </div>
         </div>
@@ -92,19 +88,30 @@
 
     <section id="pPrincipalesBtns" style="display: none;">
         <div id="principalesBtns" class="d-flex gap-2 col-6 mx-auto">
-            <button class="btn boton-estilizado btn-lg" type="button" 
-                onclick="consultarSaldo()">Consultar Saldo</button>
-            <button class="btn boton-estilizado btn-lg" type="button">Ingresar Monto</button>
-            <button class="btn boton-estilizado btn-lg" type="button">Retirar Monto</button>
+            <button class="boton-estilizado" onclick="consultarSaldo()">Consultar Saldo</button>
+            <button class="boton-estilizado" onclick="ingresarMonto()">Ingresar Monto</button>
+            <button class="boton-estilizado">Retirar Monto</button>
         </div>
     </section>
 
     <section id="pConsultarSaldo" style="display: none;">
         <p id="saldo"></p>
+        <p id="nvoSaldo"></p>
+        <button class="volverPrincipalesBtns">Volver</button>
     </section>
 
     <section id="pIngresaMonto" style="display: none;">
-
+        <div id="form1">
+            <form id="form11">
+                <label for="monto">Escriba el monto que desea ingresar</label><br>
+                <input type="password" id="monto" name="monto"><br><br>
+                <button onclick="confirmarMonto()">Ingresar Monto</button>
+            </form>
+        </div>
+        <div id="avisoSaldos">
+            <p id="saldoIngresado"></p>
+            <p id="saldoTotal"></p>
+        </div>
     </section>
 
     <section id="pRetirarMonto" style="display: none;">

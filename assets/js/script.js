@@ -45,3 +45,28 @@ function consultarSaldo() {
     pConsultarSaldo.style.display = ""
     document.getElementById('saldo').textContent = "El saldo actual de la cuenta es " + saldoPersonaje
 }
+
+function ingresarMonto() {
+    pIngresaMonto.style.display = ""
+    pPrincipalesBtns.style.display = "none"
+}
+
+function confirmarMonto() {
+    if (saldoPersonaje += montoIngresado.value < 990) {
+        event.preventDefault()
+        let montoIngresado = document.getElementById('monto').value
+
+        console.log(montoIngresado)
+
+        saldoPersonaje += montoIngresado.value;
+
+        document.getElementById('saldoIngresado').textContent = "El saldo ingresado a la cuenta es " + montoIngresado
+
+        document.getElementById('saldoTotal').textContent = "El saldo actual de la cuenta es " + saldoPersonaje
+
+    } else if(saldoPersonaje += montoIngresado.value > 990) {
+        alert("La cuenta no admite mas de 990, debe ingresar un valor menor")
+    } else {
+        alert("Debe ingresar solo numeros")
+    } 
+}
