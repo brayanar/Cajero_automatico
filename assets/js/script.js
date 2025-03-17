@@ -5,6 +5,8 @@ const pConsultarSaldo = document.getElementById('pConsultarSaldo')
 const pIngresaMonto = document.getElementById('pIngresaMonto')
 const pRetirarMonto = document.getElementById('pRetirarMonto')
 
+let saldoPersonaje
+
 var personajes = [
     { nombre: "Maria", cuenta: "corriente", dinero: 684, clave: 7154 },
     { nombre: "Javier", cuenta: "vista", dinero: 978, clave: 8520 },
@@ -36,4 +38,10 @@ function password() {
     } else {
         alert("intente nuevamente")
     }
+}
+
+function consultarSaldo() {
+    pPrincipalesBtns.style.display = "none"
+    pConsultarSaldo.style.display = ""
+    document.getElementById('saldo').textContent = "El saldo actual de la cuenta es " + saldoPersonaje
 }
