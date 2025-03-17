@@ -31,8 +31,8 @@ function password() {
 
     if (pwd == personajeSeleccionado.clave) {
         alert("Clave correcta")
-        password.style.display = "none"
-        pantallaCuentas.style.display = ""
+        pContraseña.style.display = "none"
+        pPrincipalesBtns.style.display = ""
     } else {
         alert("intente nuevamente")
     }
