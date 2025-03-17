@@ -43,7 +43,7 @@ password.addEventListener('submit', function () {
     }
 })
 
-let cuentaUsuarioSeleccinada;
+/* let cuentaUsuarioSeleccinada;
 
 function cuentaUsuario(tipoCuenta) {
     cuentaUsuarioSeleccinada = tipoCuenta
@@ -55,7 +55,7 @@ function cuentaUsuario(tipoCuenta) {
     } else {
         alert("No")
     }
-}
+} */
 
 function consultaSaldo() {
     pantallaCuentas.style.display = "none"
