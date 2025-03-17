@@ -25,7 +25,6 @@ password.addEventListener('submit', function () {
         alert("Clave correcta")
         password.style.display = "none"
         pantallaCuentas.style.display = ""
-        event.preventDefault()
     } else {
         alert("intente nuevamente")
     }

@@ -14,81 +14,89 @@
 
 <body>
     <!-- Selección de personaje -->
-    <div id="inicio">
-
-        <h1 id="titulo1">Selecciona un personaje para comenzar</h1>
-
-        <div id="cards">
-            <div class="card">
-                <img src="./assets/img/pin23.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Maria</h5>
-                    <p class="card-text">Arquitecta de 28 años, es una apasionada del diseño sostenible, enérgica y
-                        creativa, siempre buscando soluciones innovadoras; le encanta la naturaleza, pasar tiempo al
-                        aire
-                        libre haciendo senderismo, disfrutar de la ciencia ficción y la música indie, y cultivar sus
-                        propias
-                        plantas en su jardín.</p>
+    <section id="pSeleccionPersonaje">
+        <div id="inicio">
+            <h1 id="titulo1">Selecciona un personaje para comenzar</h1>
+            <div id="cards">
+                <div class="card">
+                    <img src="./assets/img/pin23.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Maria</h5>
+                        <p class="card-text">Arquitecta de 28 años, es una apasionada del diseño sostenible, enérgica y
+                            creativa, siempre buscando soluciones innovadoras; le encanta la naturaleza, pasar tiempo al
+                            aire
+                            libre haciendo senderismo, disfrutar de la ciencia ficción y la música indie, y cultivar sus
+                            propias
+                            plantas en su jardín.</p>
+                    </div>
+                    <div class="card-body">
+                        <button onclick="seleccionarPersonaje(0)">Seleccionar</button>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <button onclick="seleccionarPersonaje(0)">Seleccionar</button>
+                <div class="card">
+                    <img src="./assets/img/pin21.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Javier</h5>
+                        <p class="card-text">Programador de 35 años con mente analítica, es un apasionado de la
+                            tecnología y
+                            prefiere trabajar de forma independiente; le gusta experimentar con nuevos dispositivos,
+                            jugar
+                            videojuegos, ver películas de ciencia ficción, leer cómics y observar las estrellas con su
+                            telescopio.</p>
+                    </div>
+                    <div class="card-body">
+                        <button onclick="seleccionarPersonaje(1)">Seleccionar</button>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card">
-                <img src="./assets/img/pin21.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Javier</h5>
-                    <p class="card-text">Programador de 35 años con mente analítica, es un apasionado de la tecnología y
-                        prefiere trabajar de forma independiente; le gusta experimentar con nuevos dispositivos, jugar
-                        videojuegos, ver películas de ciencia ficción, leer cómics y observar las estrellas con su
-                        telescopio.</p>
+                <div class="card">
+                    <img src="./assets/img/pin5.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Emma</h5>
+                        <p class="card-text">Chef de 25 años, es una apasionada de la gastronomía, creativa y
+                            espontánea,
+                            que
+                            sueña con abrir su propio restaurante; le encanta viajar para descubrir nuevas culturas
+                            gastronómicas, bailar música latina, salir de fiesta con amigos y visitar museos y galerías
+                            de
+                            arte.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <button onclick="seleccionarPersonaje(2)">Seleccionar</button>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <button onclick="seleccionarPersonaje(1)">Seleccionar</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./assets/img/pin5.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Emma</h5>
-                    <p class="card-text">Chef de 25 años, es una apasionada de la gastronomía, creativa y espontánea,
-                        que
-                        sueña con abrir su propio restaurante; le encanta viajar para descubrir nuevas culturas
-                        gastronómicas, bailar música latina, salir de fiesta con amigos y visitar museos y galerías de
-                        arte.
-                    </p>
-                </div>
-                <div class="card-body">
-                    <button onclick="seleccionarPersonaje(2)">Seleccionar</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="./assets/img/pin8.jpg" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Andrés</h5>
-                    <p class="card-text">Profesor de historia de 40 años, es un apasionado de la enseñanza, culto,
-                        paciente
-                        y con un gran sentido del humor; le encanta leer libros de historia, visitar museos y sitios
-                        arqueológicos, ver cine clásico, escuchar música jazz y jugar al ajedrez en torneos locales.</p>
-                </div>
-                <div class="card-body">
-                    <button onclick="seleccionarPersonaje(3)">Seleccionar</button>
+                <div class="card">
+                    <img src="./assets/img/pin8.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Andrés</h5>
+                        <p class="card-text">Profesor de historia de 40 años, es un apasionado de la enseñanza, culto,
+                            paciente
+                            y con un gran sentido del humor; le encanta leer libros de historia, visitar museos y sitios
+                            arqueológicos, ver cine clásico, escuchar música jazz y jugar al ajedrez en torneos locales.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                        <button onclick="seleccionarPersonaje(3)">Seleccionar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Ingrese clave -->
-    <div id="form1" style="display: none;">
-        <form id="form2">
-            <label for="pwd">Ingrese la contraseña</label><br>
-            <input type="password" id="pwd" name="pwd"><br><br>
-            <input type="submit" value="Confirmar">
-        </form>
-    </div>
+    <section id="pContraseña">
+        <div id="form1" style="display: none;">
+            <form id="form2">
+                <label for="pwd">Ingrese la contraseña</label><br>
+                <input type="password" id="pwd" name="pwd"><br><br>
+                <input type="submit" value="Confirmar">
+            </form>
+        </div>
+    </section>
+
+    <section id="pPrincipalesBtns">
+
+    </section>
 
     <script src="./assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
