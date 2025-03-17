@@ -8,10 +8,10 @@ const pRetirarMonto = document.getElementById('pRetirarMonto')
 let saldoPersonaje
 
 var personajes = [
-    { nombre: "Maria", cuenta: "corriente", dinero: 684, clave: 7154 },
-    { nombre: "Javier", cuenta: "vista", dinero: 978, clave: 8520 },
-    { nombre: "Emma", cuenta: "ahorro", dinero: 598, clave: 3817 },
-    { nombre: "Andrés", cuenta: "debito", dinero: 749, clave: 1863 },
+    { nombre: "Maria", dinero: 684, clave: 7154 },
+    { nombre: "Javier", dinero: 978, clave: 8520 },
+    { nombre: "Emma", dinero: 598, clave: 3817 },
+    { nombre: "Andrés", dinero: 749, clave: 1863 },
 ]
 
 // Seleccion de personaje
@@ -34,7 +34,7 @@ function password() {
     if (pwd == personajeSeleccionado.clave) {
         alert("Clave correcta")
         pContraseña.style.display = "none"
-        pPrincipalesBtns.style.display = ""
+        pPrincipalesBtns.style.display = " "
     } else {
         alert("intente nuevamente")
     }
