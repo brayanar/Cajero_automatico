@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <!-- Selección de personaje -->
     <div id="inicio">
 
@@ -83,30 +82,12 @@
     </div>
 
     <!-- Ingrese clave -->
-
     <div id="form1" style="display: none;">
         <form id="form2">
             <label for="pwd">Ingrese la contraseña</label><br>
             <input type="password" id="pwd" name="pwd"><br><br>
             <input type="submit" value="Confirmar">
         </form>
-    </div>
-
-    <!-- Pantalla Retirar monto -->
-
-    <div id="pantallaRetiro" style="display: none;">
-        <form id="inputRetiro" style="display: none;">
-            <label for="valorInput" class="titulos">Por favor, escriba el monto que desea.</label><br>
-            <input type="password" id="valorInput" name="valorInput"><br>
-            <button onclick="enviarValor()" type="submit" value="Confirmar" id="inputEnviar">Confirmar</button>
-        </form>
-
-        <!-- ¿Esta seguro del monto? -->
-
-        <div id="confirmar1" style="display: none;">
-            <p id="valorEnviado"></p>
-            <button onclick="retirarMonto()">Confirmar</button>
-        </div>
     </div>
 
     <script src="./assets/js/script.js"></script>
