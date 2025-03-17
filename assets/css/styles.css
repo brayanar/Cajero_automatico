@@ -36,7 +36,7 @@ body {
     background-color: #F8F3D9;
 }
 
-#form {
+#pContraseña {
     height: 50vh;
     align-self: center;
     width: 50vw;
@@ -44,13 +44,14 @@ body {
     text-align: center;
 }
 
-#form1 {
+#form {
     display: flex;
     height: 100vh;
+    width: 100vw;
     justify-content: center;
 }
 
-#form2 {
+#form1 {
     text-align: center;
     align-self: center;
 }
@@ -60,7 +61,12 @@ body {
     color: #2C3930;
 }
 
-#form2 input {
+#form1 input {
+    border-radius: 5px;
+    background-color: #F8F3D9;
+}
+
+#form1 button {
     border-radius: 5px;
     background-color: #F8F3D9;
 }
@@ -148,4 +154,18 @@ body {
 
 #transaccion {
     align-content: center;
+}
+
+.boton-estilizado {
+    align-self: center;
+    padding: 5px 10px;
+    background-color: #F8F3D9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    color: black;
+    border-color: black;
+    border-width: 2px;
+    width: fit-content;
+    margin-bottom: 10%;
 }

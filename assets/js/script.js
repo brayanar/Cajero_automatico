@@ -1,3 +1,9 @@
+const pSeleccionPersonaje = document.getElementById('pSeleccionPersonaje') 
+const pContraseña = document.getElementById('pContraseña')
+const pPrincipalesBtns = document.getElementById('pPrincipalesBtns')
+const pConsultarSaldo = document.getElementById('pConsultarSaldo')
+const pIngresaMonto = document.getElementById('pIngresaMonto')
+const pRetirarMonto = document.getElementById('pRetirarMonto')
 
 var personajes = [
     { nombre: "Maria", cuenta: "corriente", dinero: 684, clave: 7154 },
@@ -11,13 +17,15 @@ var personajes = [
 let personajeSeleccionado;
 
 function seleccionarPersonaje(indice) {
+    pContraseña.style.display = ""
+    pSeleccionPersonaje.style.display = "none"
     personajeSeleccionado = personajes[indice]
     saldoPersonaje = personajes[indice].dinero
     console.log(personajeSeleccionado.clave)
     console.log(saldoPersonaje)
 }
 
-password.addEventListener('submit', function () {
+function password() {
     let pwd = document.getElementById('pwd').value
     console.log(pwd)
 
@@ -28,4 +36,4 @@ password.addEventListener('submit', function () {
     } else {
         alert("intente nuevamente")
     }
-})
+}

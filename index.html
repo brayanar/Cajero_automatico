@@ -29,9 +29,8 @@
                             propias
                             plantas en su jardín.</p>
                     </div>
-                    <div class="card-body">
-                        <button onclick="seleccionarPersonaje(0)">Seleccionar</button>
-                    </div>
+                    <a href="#pContraseña" class="btn boton-estilizado" tabindex="-1" role="button" 
+                        onclick="seleccionarPersonaje(0)">Seleccionar</a>
                 </div>
                 <div class="card">
                     <img src="./assets/img/pin21.jpg" class="card-img-top">
@@ -44,9 +43,8 @@
                             videojuegos, ver películas de ciencia ficción, leer cómics y observar las estrellas con su
                             telescopio.</p>
                     </div>
-                    <div class="card-body">
-                        <button onclick="seleccionarPersonaje(1)">Seleccionar</button>
-                    </div>
+                    <a href="#pContraseña" class="btn boton-estilizado" tabindex="-1" role="button" 
+                        onclick="seleccionarPersonaje(1)">Seleccionar</a>
                 </div>
                 <div class="card">
                     <img src="./assets/img/pin5.jpg" class="card-img-top">
@@ -61,9 +59,8 @@
                             arte.
                         </p>
                     </div>
-                    <div class="card-body">
-                        <button onclick="seleccionarPersonaje(2)">Seleccionar</button>
-                    </div>
+                    <a href="#pContraseña" class="btn boton-estilizado" tabindex="-1" role="button" 
+                        onclick="seleccionarPersonaje(2)">Seleccionar</a>
                 </div>
                 <div class="card">
                     <img src="./assets/img/pin8.jpg" class="card-img-top">
@@ -75,26 +72,41 @@
                             arqueológicos, ver cine clásico, escuchar música jazz y jugar al ajedrez en torneos locales.
                         </p>
                     </div>
-                    <div class="card-body">
-                        <button onclick="seleccionarPersonaje(3)">Seleccionar</button>
-                    </div>
+                    <a href="#pContraseña" class="btn boton-estilizado" tabindex="-1" role="button" 
+                        onclick="seleccionarPersonaje(3)">Seleccionar</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Ingrese clave -->
-    <section id="pContraseña">
-        <div id="form1" style="display: none;">
-            <form id="form2">
+    <section id="pContraseña" style="display: none;">
+        <div id="form">
+            <form id="form1">
                 <label for="pwd">Ingrese la contraseña</label><br>
                 <input type="password" id="pwd" name="pwd"><br><br>
-                <input type="submit" value="Confirmar">
+                <button onclick="password()">Confimar</button>
             </form>
         </div>
     </section>
 
-    <section id="pPrincipalesBtns">
+    <section id="pPrincipalesBtns" style="display: none;">
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn" type="button">Consultar Saldo</button>
+            <button class="btn" type="button">Ingresar Monto</button>
+            <button class="btn" type="button">Retirar Monto</button>
+        </div>
+    </section>
+
+    <section id="pConsultarSaldo" style="display: none;">
+
+    </section>
+
+    <section id="pIngresaMonto" style="display: none;">
+
+    </section>
+
+    <section id="pRetirarMonto" style="display: none;">
 
     </section>
 
