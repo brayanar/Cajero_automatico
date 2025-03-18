@@ -74,9 +74,8 @@ saldoIngresado.addEventListener('submit', function () {
     let dineroIngresado = document.getElementById('pwd2').value
     console.log(dineroIngresado)
 
-    nuevoSaldoPersonaje = Number(saldoPersonaje) + Number(dineroIngresado)
-
     if (nuevoSaldoPersonaje < 990) {
+        nuevoSaldoPersonaje = Number(saldoPersonaje) + Number(dineroIngresado)
         document.getElementById('saldoIngresado').textContent = "El saldo ingresado de la cuenta es " + dineroIngresado
         document.getElementById('saldoTotalIngreso').textContent = "El saldo actual de la cuenta es " + nuevoSaldoPersonaje
         formIngreso.style.display = "none"
@@ -100,9 +99,8 @@ saldoRetirado.addEventListener('submit', function () {
     let dineroRetirado = document.getElementById('pwd3').value
     console.log(dineroRetirado)
 
-    nuevoSaldoPersonaje = Number(saldoPersonaje) - Number(dineroRetirado)
-
     if (nuevoSaldoPersonaje > 10) {
+        nuevoSaldoPersonaje = Number(saldoPersonaje) - Number(dineroRetirado)
         document.getElementById('saldoRetirado').textContent = "El saldo retirado de la cuenta es " + dineroRetirado
         document.getElementById('saldoTotalEgreso').textContent = "El saldo actual de la cuenta es " + nuevoSaldoPersonaje
         formEgreso.style.display = "none"
