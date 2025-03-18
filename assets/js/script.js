@@ -5,6 +5,12 @@ const pConsultarSaldo = document.getElementById('pConsultarSaldo')
 const pIngresaMonto = document.getElementById('pIngresaMonto')
 const pRetirarMonto = document.getElementById('pRetirarMonto')
 
+const formIngreso = document.getElementById('formIngresarMonto')
+const formEgreso = document.getElementById('formRetirarMonto')
+
+let saldoPersonaje
+let nuevoSaldoPersonaje
+
 let saldoIngresado = document.getElementById('formIngresarMonto1')
 let saldoRetirado = document.getElementById('formRetirarMonto1')
 
@@ -24,11 +30,11 @@ function seleccionarPersonaje(indice) {
     pSeleccionPersonaje.style.display = "none"
     personajeSeleccionado = personajes[indice]
     saldoPersonaje = personajes[indice].dinero
+    alert("La clave de ingreso es: " + personajeSeleccionado.clave)
     console.log(personajeSeleccionado.clave)
 }
 
-let saldoPersonaje
-let nuevoSaldoPersonaje
+// Ingreso de Clave
 
 function password() {
     event.preventDefault()
@@ -44,6 +50,8 @@ function password() {
     }
 }
 
+// Funcion de consulta de saldo
+
 function consultarSaldo() {
     pPrincipalesBtns.style.display = "none"
     pConsultarSaldo.style.display = ""
@@ -51,8 +59,11 @@ function consultarSaldo() {
     console.log(saldoPersonaje)
 }
 
+// Funcion de Ingresar monto
+
 function ingresarMonto() {
     pIngresaMonto.style.display = ""
+    formIngreso.style.display = ""
     pPrincipalesBtns.style.display = "none"
     console.log(saldoPersonaje)
 }
@@ -61,21 +72,25 @@ saldoIngresado.addEventListener('submit', function () {
     event.preventDefault()
     let dineroIngresado = document.getElementById('pwd2').value
     console.log(dineroIngresado)
-    
+
     nuevoSaldoPersonaje = Number(saldoPersonaje) + Number(dineroIngresado)
 
     if (nuevoSaldoPersonaje < 990) {
         document.getElementById('saldoIngresado').textContent = "El saldo ingresado de la cuenta es " + dineroIngresado
         document.getElementById('saldoTotalIngreso').textContent = "El saldo actual de la cuenta es " + nuevoSaldoPersonaje
+        formIngreso.style.display = "none"
     } else if (nuevoSaldoPersonaje > 990) {
-        alert("La cuenta no admite menos de 10, debe retirar un valor menor")
+        alert("La cuenta no admite mas de 990, debe ingresar un valor menor")
     } else {
         alert("Debe ingresar solo numeros")
     }
-})  
+})
+
+// Funcion de retirar de saldo
 
 function retirarMonto() {
     pRetirarMonto.style.display = ""
+    formEgreso.style.display = ""
     pPrincipalesBtns.style.display = "none"
 }
 
@@ -83,12 +98,13 @@ saldoRetirado.addEventListener('submit', function () {
     event.preventDefault()
     let dineroRetirado = document.getElementById('pwd3').value
     console.log(dineroRetirado)
-    
+
     nuevoSaldoPersonaje = Number(saldoPersonaje) - Number(dineroRetirado)
 
     if (nuevoSaldoPersonaje > 10) {
         document.getElementById('saldoRetirado').textContent = "El saldo retirado de la cuenta es " + dineroRetirado
         document.getElementById('saldoTotalEgreso').textContent = "El saldo actual de la cuenta es " + nuevoSaldoPersonaje
+        formEgreso.style.display = "none"
     } else if (nuevoSaldoPersonaje < 10) {
         alert("La cuenta no admite menos de 10, debe retirar un valor menor")
     } else {
@@ -96,6 +112,7 @@ saldoRetirado.addEventListener('submit', function () {
     }
 })
 
+// Boton para poder navegar entre pantallas
 
 function volverPantallaPrincipal(indice) {
     document.getElementById('saldo').textContent = ""
