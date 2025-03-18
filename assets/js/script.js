@@ -82,7 +82,7 @@ saldoRetirado.addEventListener('submit', function (){
     let dineroRetirado = document.getElementById('pwd3').value
     console.log(dineroRetirado)
 
-    let nuevoSaldoPersonaje = Number(saldoPersonaje)  - Number(dineroRetirado) 
+    let nuevoSaldoPersonaje = Number(saldoPersonaje)  -  Number(dineroRetirado) 
 
     if (nuevoSaldoPersonaje > 10) {
         document.getElementById('saldoRetirado').textContent = "El saldo retirado de la cuenta es " + dineroRetirado
