@@ -55,8 +55,9 @@ function password() {
 function consultarSaldo() {
     pPrincipalesBtns.style.display = "none"
     pConsultarSaldo.style.display = ""
-    document.getElementById('saldo').textContent = "El saldo actual de la cuenta es " + saldoPersonaje
+    document.getElementById('saldo').textContent = "El saldo actual de la cuenta es " + saldoPersonaje;
     console.log(saldoPersonaje)
+
 }
 
 // Funcion de Ingresar monto
