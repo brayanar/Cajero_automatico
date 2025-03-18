@@ -95,38 +95,38 @@
     </section>
 
     <section id="pConsultarSaldo" style="display: none;">
-        <button id="pConsultaSaldoVolver" onclick="volverPantallaPrincipal(0)">Volver</button>
-        <p id="saldo"></p>
-        <p id="nvoSaldo"></p>
+        <p id="saldo" class="titulos"></p>
+        <p id="nvoSaldo" class="titulos"></p>
+        <button id="pConsultaSaldoVolver" onclick="volverPantallaPrincipal(0)" class="boton-estilizado">Volver</button>
     </section>
 
     <section id="pIngresaMonto" style="display: none;">
         <div id="formIngresarMonto">
             <form id="formIngresarMonto1">
-                <label for="pdw2">Escriba el monto que desea ingresar</label><br>
+                <label for="pdw2" class="titulos">Escriba el monto que desea ingresar</label><br>
                 <input type="password" id="pwd2" name="pwd2" pattern="[0-9]*"><br><br>
-                <input type="submit" value="Ingresar monto">
+                <input type="submit" value="Ingresar monto" class="boton-estilizado">
             </form>
         </div>
         <div id="avisoSaldos">
-            <button id="pIngresoSaldoVolver" onclick="volverPantallaPrincipal(1)">Volver</button>
-            <p id="saldoIngresado"></p>
-            <p id="saldoTotalIngreso"></p>
+            <p id="saldoIngresado" class="titulos"></p>
+            <p id="saldoTotalIngreso" class="titulos"></p>
+            <button id="pIngresoSaldoVolver" onclick="volverPantallaPrincipal(1)" class="boton-estilizado">Volver</button>
         </div>
     </section>
 
     <section id="pRetirarMonto" style="display: none;">
         <div id="formRetirarMonto">
             <form id="formRetirarMonto1">
-                <label for="pdw3">Escriba el monto que desea retirar</label><br>
+                <label for="pdw3" class="titulos">Escriba el monto que desea retirar</label><br>
                 <input type="password" id="pwd3" name="pwd3" pattern="[0-9]*"><br><br>
-                <input type="submit" value="Retirar Monto">
+                <input type="submit" value="Retirar Monto" class="boton-estilizado">
             </form>
         </div>
         <div id="avisoRetiros">
-            <button id="pRetiroSaldoVolver" onclick="volverPantallaPrincipal(2)">Volver</button>
-            <p id="saldoRetirado"></p>
-            <p id="saldoTotalEgreso"></p>
+            <p id="saldoRetirado" class="titulos"></p>
+            <p id="saldoTotalEgreso" class="titulos"></p>
+            <button id="pRetiroSaldoVolver" onclick="volverPantallaPrincipal(2)" class="boton-estilizado">Volver</button>
         </div>
     </section>
 

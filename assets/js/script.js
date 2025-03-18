@@ -61,20 +61,18 @@ saldoIngresado.addEventListener('submit', function () {
     event.preventDefault()
     let dineroIngresado = document.getElementById('pwd2').value
     console.log(dineroIngresado)
-    console.log(saldoPersonaje)
-    nuevoSaldoPersonaje = saldoPersonaje + dineroIngresado
+    
+    nuevoSaldoPersonaje = Number(saldoPersonaje) + Number(dineroIngresado)
 
     if (nuevoSaldoPersonaje < 990) {
-        document.getElementById('saldoIngresado').textContent = "El saldo ingresado a la cuenta es " + dineroIngresado
+        document.getElementById('saldoIngresado').textContent = "El saldo ingresado de la cuenta es " + dineroIngresado
         document.getElementById('saldoTotalIngreso').textContent = "El saldo actual de la cuenta es " + nuevoSaldoPersonaje
     } else if (nuevoSaldoPersonaje > 990) {
-        alert("La cuenta no admite mas de 990, debe ingresar un valor menor")
-    } else if ((saldoPersonaje)) {
-        alert("Ta malo")
+        alert("La cuenta no admite menos de 10, debe retirar un valor menor")
     } else {
         alert("Debe ingresar solo numeros")
     }
-})
+})  
 
 function retirarMonto() {
     pRetirarMonto.style.display = ""
