@@ -5,6 +5,8 @@ const pConsultarSaldo = document.getElementById('pConsultarSaldo')
 const pIngresaMonto = document.getElementById('pIngresaMonto')
 const pRetirarMonto = document.getElementById('pRetirarMonto')
 
+let saldoIngresado = document.getElementById('formIngresarMonto1')
+
 let saldoPersonaje
 
 var personajes = [
@@ -28,6 +30,7 @@ function seleccionarPersonaje(indice) {
 }
 
 function password() {
+    event.preventDefault()
     let pwd = document.getElementById('pwd').value
     console.log(pwd)
 
@@ -51,22 +54,19 @@ function ingresarMonto() {
     pPrincipalesBtns.style.display = "none"
 }
 
-function confirmarMonto() {
-    if (saldoPersonaje += montoIngresado.value < 990) {
-        event.preventDefault()
-        let montoIngresado = document.getElementById('monto').value
+saldoIngresado.addEventListener('submit', function (){
+    event.preventDefault()
+    let dineroIngresado = document.getElementById('pwd2').value
+    console.log(dineroIngresado)
 
-        console.log(montoIngresado)
+    let nuevoSaldoPersonaje = Number(saldoPersonaje)  + Number(dineroIngresado) 
 
-        saldoPersonaje += montoIngresado.value;
-
-        document.getElementById('saldoIngresado').textContent = "El saldo ingresado a la cuenta es " + montoIngresado
-
-        document.getElementById('saldoTotal').textContent = "El saldo actual de la cuenta es " + saldoPersonaje
-
-    } else if(saldoPersonaje += montoIngresado.value > 990) {
+    if (nuevoSaldoPersonaje < 990) {
+        document.getElementById('saldoIngresado').textContent = "El saldo ingresado a la cuenta es " + dineroIngresado
+        document.getElementById('saldoTotal').textContent = "El saldo actual de la cuenta es " + nuevoSaldoPersonaje
+    } else if(nuevoSaldoPersonaje > 990) {
         alert("La cuenta no admite mas de 990, debe ingresar un valor menor")
     } else {
         alert("Debe ingresar solo numeros")
     } 
-}
+})
