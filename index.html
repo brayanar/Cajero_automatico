@@ -95,9 +95,9 @@
     </section>
 
     <section id="pConsultarSaldo" style="display: none;">
+        <button id="pConsultaSaldoVolver" onclick="volverPantallaPrincipal(0)">Volver</button>
         <p id="saldo"></p>
         <p id="nvoSaldo"></p>
-        <button class="volverPrincipalesBtns">Volver</button>
     </section>
 
     <section id="pIngresaMonto" style="display: none;">
@@ -109,6 +109,7 @@
             </form>
         </div>
         <div id="avisoSaldos">
+            <button id="pIngresoSaldoVolver" onclick="volverPantallaPrincipal(1)">Volver</button>
             <p id="saldoIngresado"></p>
             <p id="saldoTotalIngreso"></p>
         </div>
@@ -117,12 +118,13 @@
     <section id="pRetirarMonto" style="display: none;">
         <div id="formRetirarMonto">
             <form id="formRetirarMonto1">
-                <label for="pdw3">Escriba el monto que desea ingresar</label><br>
+                <label for="pdw3">Escriba el monto que desea retirar</label><br>
                 <input type="password" id="pwd3" name="pwd3"><br><br>
                 <input type="submit" value="Retirar Monto">
             </form>
         </div>
         <div id="avisoRetiros">
+            <button id="pRetiroSaldoVolver" onclick="volverPantallaPrincipal(2)">Volver</button>
             <p id="saldoRetirado"></p>
             <p id="saldoTotalEgreso"></p>
         </div>
