@@ -98,12 +98,15 @@ function volverPantallaPrincipal(indice) {
     document.getElementById('saldoTotalIngreso').textContent = ""
 
     if ([indice] == 0) {
+        saldoPersonaje = nuevoSaldoPersonaje
         pConsultarSaldo.style.display = "none"
         pPrincipalesBtns.style.display = ""
     } else if ([indice] == 1) {
+        saldoPersonaje = nuevoSaldoPersonaje
         pIngresaMonto.style.display = "none"
         pPrincipalesBtns.style.display = ""
     } else if ([indice] == 2) {
+        saldoPersonaje = nuevoSaldoPersonaje
         pRetirarMonto.style.display = "none"
         pPrincipalesBtns.style.display = ""
     } else {
