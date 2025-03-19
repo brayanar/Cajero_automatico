@@ -71,16 +71,17 @@ function ingresarMonto() {
 
 saldoIngresado.addEventListener('submit', function () {
     event.preventDefault()
-    let dineroIngresado = document.getElementById('pwd2').value
-    console.log(dineroIngresado)
+    let montoIngresado = document.getElementById('pwd2').value
+    console.log(montoIngresado)
+    let saldoProvisional = Number(saldoPersonaje) + Number(montoIngresado)
 
-    nuevoSaldoPersonaje = Number(saldoPersonaje) + Number(dineroIngresado)
-
-    if (nuevoSaldoPersonaje < 990) {
+    if (saldoProvisional < 990) {
+        let dineroIngresado = montoIngresado
+        nuevoSaldoPersonaje = Number(saldoPersonaje) + Number(montoIngresado)
         document.getElementById('saldoIngresado').textContent = "El saldo ingresado de la cuenta es " + dineroIngresado
         document.getElementById('saldoTotalIngreso').textContent = "El saldo actual de la cuenta es " + nuevoSaldoPersonaje
         formIngreso.style.display = "none"
-    } else if (nuevoSaldoPersonaje > 990) {
+    } else if (saldoProvisional > 990) {
         alert("La cuenta no admite mas de 990, debe ingresar un valor menor")
     } else {
         alert("Debe ingresar solo numeros")
@@ -97,16 +98,18 @@ function retirarMonto() {
 
 saldoRetirado.addEventListener('submit', function () {
     event.preventDefault()
-    let dineroRetirado = document.getElementById('pwd3').value
-    console.log(dineroRetirado)
+    let montoRetirado = document.getElementById('pwd3').value
+    console.log(montoRetirado)
+    let saldoProvisional = Number(saldoPersonaje) - Number(montoRetirado) 
 
-    nuevoSaldoPersonaje = Number(saldoPersonaje) - Number(dineroRetirado)
 
-    if (nuevoSaldoPersonaje > 10) {
+    if (saldoProvisional > 10) {
+        let dineroRetirado = montoRetirado
+        nuevoSaldoPersonaje = Number(saldoPersonaje) - Number(dineroRetirado)
         document.getElementById('saldoRetirado').textContent = "El saldo retirado de la cuenta es " + dineroRetirado
         document.getElementById('saldoTotalEgreso').textContent = "El saldo actual de la cuenta es " + nuevoSaldoPersonaje
         formEgreso.style.display = "none"
-    } else if (nuevoSaldoPersonaje < 10) {
+    } else if (saldoProvisional < 10) {
         alert("La cuenta no admite menos de 10, debe retirar un valor menor")
     } else {
         alert("Debe ingresar solo numeros")
