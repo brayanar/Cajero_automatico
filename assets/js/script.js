@@ -81,7 +81,9 @@ saldoIngresado.addEventListener('submit', function () {
         document.getElementById('saldoIngresado').textContent = "El saldo ingresado de la cuenta es " + dineroIngresado
         document.getElementById('saldoTotalIngreso').textContent = "El saldo actual de la cuenta es " + nuevoSaldoPersonaje
         formIngreso.style.display = "none"
+        document.getElementById('pIngresoSaldoVolver').style.display = ""
     } else if (saldoProvisional > 990) {
+        document.getElementById('pIngresoSaldoVolver').style.display = "none"
         alert("La cuenta no admite mas de 990, debe ingresar un valor menor")
     } else {
         alert("Debe ingresar solo numeros")
@@ -109,8 +111,10 @@ saldoRetirado.addEventListener('submit', function () {
         document.getElementById('saldoRetirado').textContent = "El saldo retirado de la cuenta es " + dineroRetirado
         document.getElementById('saldoTotalEgreso').textContent = "El saldo actual de la cuenta es " + nuevoSaldoPersonaje
         formEgreso.style.display = "none"
+        document.getElementById('pRetiroSaldoVolver').style.display = ""
     } else if (saldoProvisional < 10) {
         alert("La cuenta no admite menos de 10, debe retirar un valor menor")
+        document.getElementById('pRetiroSaldoVolver').style.display = "none"
     } else {
         alert("Debe ingresar solo numeros")
     }
